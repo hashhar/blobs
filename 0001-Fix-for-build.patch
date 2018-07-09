@@ -1,22 +1,22 @@
-From d85204bad0fbb4064bdcdfe1aa171c5447ac1744 Mon Sep 17 00:00:00 2001
+From cb0b7f6b4da76f274b9bb13c350c1b7cb11f9d22 Mon Sep 17 00:00:00 2001
 From: Ashhar Hasan <hashhar_dev@outlook.com>
 Date: Mon, 9 Jul 2018 08:18:00 -0700
 Subject: [PATCH] Fix for build
 
 ---
- INSTALL.md                |  14 ++++++++++++++
+ INSTALL.md                |  15 +++++++++++++++
  build.xml                 |   3 ---
  lib/ivy/jar/slf4j-api.jar | Bin 0 -> 41203 bytes
- 3 files changed, 14 insertions(+), 3 deletions(-)
+ 3 files changed, 15 insertions(+), 3 deletions(-)
  create mode 100644 INSTALL.md
  create mode 100644 lib/ivy/jar/slf4j-api.jar
 
 diff --git a/INSTALL.md b/INSTALL.md
 new file mode 100644
-index 00000000..8f5a38a8
+index 00000000..f57fd7c9
 --- /dev/null
 +++ b/INSTALL.md
-@@ -0,0 +1,14 @@
+@@ -0,0 +1,15 @@
 +# Build Instructions
 +
 +Dependencies:
@@ -24,14 +24,14 @@ index 00000000..8f5a38a8
 +- JDK10: Download JDK10, install, set JAVA_HOME and PATH.
 +- Apache Ant: Unzip and set ANT_HOME and PATH.
 +- Apache Ivy: Unzip and copy jar to ANT_HOME/lib
-+- JRE10 tar.gz: Download the tar.gz JRE10 and place it in `cache` in the repository.
 +
 +Steps:
 +
 +1. `git clone https://github.com/filebot/filebot`
 +2. `cd filebot && git apply 0001-Fix-for-build.patch`
 +3. `ant resolve; ant; ant msi`
-\ No newline at end of file
++
++The patch can be found at https://github.com/hashhar/blobs.
 diff --git a/build.xml b/build.xml
 index f5e8750f..607a8dab 100644
 --- a/build.xml
